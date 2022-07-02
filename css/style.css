@@ -1,7 +1,7 @@
 :root {
     /* fonts */
     --main-font: 'Roboto', sans-serif;
-    --secondary-font: 'Raleway'', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
   
     /* text colors */
     --main-txt-cl: #212121;
@@ -19,7 +19,24 @@
 body {
     font-family: var(--main-font);
     color: var(--main-txt-cl);
+    background-color: var(--white-bg-cl);
+    font-size: 14px;
+    letter-spacing: 0.03em;
 }
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 
 /*Reset styles*/
 
@@ -34,33 +51,28 @@ body {
 
 /*Base styles*/
 
-.hidden {
-    display: none;
-}
-
 .letter {
     color: #2180f3;
 }
 
 .main-title {
     font-size: 44px;
-    line-height: 60px;
+    line-height: 1.3;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #ffff;
+    color: var(--btn-txt-cl);
 }
 
 .section-title {
     font-size: 36px;
-    line-height: 42px;
-    letter-spacing: 0.03em;
+    line-height: 1.1;
 }
 
 .main-btn {
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1.8;
     display: flex;
     align-items: center;
     text-align: center;
@@ -73,7 +85,7 @@ body {
 .main-btn:hover,
 .main-btn:focus {
     color: var(--btn-txt-cl);
-    background-color: #2180f3;
+    background-color: #0d6ee6;
 }
 
 /*Header*/
@@ -82,8 +94,7 @@ body {
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
-    line-height: 31px;
-    letter-spacing: 0.03em;
+    line-height: 1.2;
 }
 
 .studio {
@@ -93,7 +104,7 @@ body {
 .header-link {
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
 }
 
@@ -101,7 +112,7 @@ body {
 .header-e-mail {
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     color: #757575;
 }
@@ -130,15 +141,13 @@ body {
 .peculiarities-title {
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
+    line-height: 1.1;
     text-transform: uppercase;
 }
 
 .peculiarities-text {
     font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
+    line-height: 1.7;
     color: #757575;
 }
 
@@ -151,14 +160,12 @@ body {
 .our-team-stuff {
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.03em;
+    line-height: 1.1;
 }
 
 .our-team-professions {
     font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.03em;
+    line-height: 1.1;
     color: #757575;
 }
 
@@ -168,20 +175,21 @@ body {
     background-color: var(--black-bg-cl);
 }
 
+.footer-address {
+    font-style: normal;
+}
+
 .footer-link {
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
+    line-height: 1.7;
     color: #FFFFFF;
 }
 
-.footer-comunication {
+.footer-counication {
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-
+    line-height: 1.7;
 }
 
 .footer-communication-color {
@@ -192,17 +200,20 @@ body {
 .footer-link:focus,
 .footer-communication:hover,
 .footer-communication:focus {
-    color: #2196F3;
+    color: var(--accent-txt-cl);
 }
 
 /*Portfolio*/
 
 .portfolio-btn {
-    font-style: var(--main-font);
+    font-family: var(--main-font);
     font-weight: 500;   
     font-size: 16px;
-    line-height: 26px;
+    line-height: 1.6;
     letter-spacing: 0.03em; 
+    cursor: pointer;
+    color: #212121;
+    background-color: #F5F4FA;
 }
 
 .portfolio-btn:hover,
@@ -219,14 +230,13 @@ body {
 .portfolio-title {
     font-weight: 700;
     font-size: 18px;
-    line-height: 36px;
+    line-height: 2;
     letter-spacing: 0.06em;
 }
 
 .portfolio-description {
-    font-weight: 400;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1.8;
     letter-spacing: 0.03em;
     color: #757575;
 }
